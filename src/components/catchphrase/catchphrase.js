@@ -8,6 +8,7 @@ export default function Catchphrase({ phrase, setPhrase, setPhraseList }) {
   return (
     <div className="catchphrase">
       <div className="form-control">
+        <p>Add A Catch Phrase</p>
         <input
           type="text"
           style={{ height: '250px' }}

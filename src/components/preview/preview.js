@@ -2,6 +2,7 @@ import React from 'react';
 import Character from '../character/character';
 import Catchphrase from '../catchphrase/catchphrase';
 import { useState } from 'react';
+import './preview.css';
 
 export default function Preview() {
   const [head, setHead] = useState('');
@@ -31,6 +32,15 @@ export default function Preview() {
         }}
       />
 
+      <Catchphrase
+        {...{
+          phrase,
+          setPhrase,
+          phraseList,
+          setPhraseList,
+        }}
+      />
+
       <div className="parts">
         <img alt={head} src={`${process.env.PUBLIC_URL}/assets/${head}.png`} />
         <img alt={middle} src={`${process.env.PUBLIC_URL}/assets/${middle}.png`} />
@@ -41,14 +51,6 @@ export default function Preview() {
       {!!middleCount && <p>You have changed the middle {middleCount} times. </p>}
       {!!bottomCount && <p>You have changed the bottom {bottomCount} times. </p>}
 
-      <Catchphrase
-        {...{
-          phrase,
-          setPhrase,
-          phraseList,
-          setPhraseList,
-        }}
-      />
       {!!phraseList.length && (
         <div className="phrase-list">
           You have called your character:

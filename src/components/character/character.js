@@ -1,4 +1,5 @@
 import React from 'react';
+import './character.css';
 
 export default function Character({
   head,
@@ -25,8 +26,9 @@ export default function Character({
   };
 
   return (
-    <div className="character-editor">
+    <div className="editor">
       <div className="form-control">
+        <p>Head</p>
         <select value={head} onChange={handleHead}>
           <option value="bird-head">Bird</option>
           <option value="duck-head">Duck</option>
@@ -35,6 +37,7 @@ export default function Character({
         </select>
       </div>
       <div className="form-control">
+        <p>Middle</p>
         <select value={middle} onChange={handleMiddle}>
           <option value="blue-middle">Blue</option>
           <option value="dress-middle">Dress</option>
@@ -43,6 +46,7 @@ export default function Character({
         </select>
       </div>
       <div className="form-control">
+        <p>Bottom</p>
         <select value={bottom} onChange={handleBottom}>
           <option value="blue-pants">Blue Pants</option>
           <option value="dog-pants">Dog Pants</option>
