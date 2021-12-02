@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Character from '../character/character';
 import Catchphrase from '../catchphrase/catchphrase';
+import Preview from '../preview/preview';
 
 export default function Main() {
   const [head, setHead] = useState('head');
@@ -16,6 +17,7 @@ export default function Main() {
     <main className="main">
       <Character {...{ head, setHead, middle, setMiddle, bottom, setBottom }} />
       <Catchphrase {...{ phrase, setPhrase }} />
+      <Preview {...{ head, middle, bottom }} />
     </main>
   );
 }

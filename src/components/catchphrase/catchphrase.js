@@ -1,13 +1,17 @@
 import React from 'react';
 
-export default function Catchphrase({ setPhrase, phrase }) {
-  const slogan = (e) => {
-    setPhrase(e.target.value);
-  };
+export default function Catchphrase({ phrase, setPhrase }) {
   return (
     <div className="catchphrase">
       <div className="form-control">
-        <textarea style={{ height: '250px' }} value={phrase} onInput={slogan}></textarea>
+        <input
+          type="text"
+          style={{ height: '250px' }}
+          value={phrase}
+          onInput={(e) => {
+            setPhrase(e.target.value);
+          }}
+        />
       </div>
     </div>
   );
