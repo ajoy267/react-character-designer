@@ -1,6 +1,10 @@
 import React from 'react';
 
-export default function Catchphrase({ phrase, setPhrase }) {
+export default function Catchphrase({ phrase, setPhrase, setPhraseList }) {
+  const handleClick = () => {
+    setPhraseList((prevState) => [...prevState, phrase]);
+    setPhrase('');
+  };
   return (
     <div className="catchphrase">
       <div className="form-control">
@@ -8,11 +12,12 @@ export default function Catchphrase({ phrase, setPhrase }) {
           type="text"
           style={{ height: '250px' }}
           value={phrase}
-          onInput={(e) => {
+          onChange={(e) => {
             setPhrase(e.target.value);
           }}
         />
       </div>
+      <button onClick={handleClick}>Save</button>
     </div>
   );
 }

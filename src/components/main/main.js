@@ -1,23 +1,11 @@
 import React from 'react';
-import { useState } from 'react';
-import Character from '../character/character';
-import Catchphrase from '../catchphrase/catchphrase';
 import Preview from '../preview/preview';
+import background from '../../bg.jpeg';
 
-export default function Main() {
-  const [head, setHead] = useState('head');
-  const [middle, setMiddle] = useState('middle');
-  const [bottom, setBottom] = useState('bottom');
-  const [phrase, setPhrase] = useState('phrase');
-  //const [headCount, setHeadCount] = useState(0);
-  //const [middleCount, setMiddleCount] = useState(0);
-  //const [bottomCount, setBottomCount] = useState(0);
-
+export default function Main(head, middle, bottom, phrase) {
   return (
-    <main className="main">
-      <Character {...{ head, setHead, middle, setMiddle, bottom, setBottom }} />
-      <Catchphrase {...{ phrase, setPhrase }} />
-      <Preview {...{ head, middle, bottom }} />
+    <main className="background" style={{ backgroundImage: `url(${background})` }}>
+      <Preview {...{ head, middle, bottom, phrase }} />
     </main>
   );
 }
