@@ -5,9 +5,9 @@ import { useState } from 'react';
 import './preview.css';
 
 export default function Preview() {
-  const [head, setHead] = useState('');
-  const [middle, setMiddle] = useState('');
-  const [bottom, setBottom] = useState('');
+  const [head, setHead] = useState('bird-head');
+  const [middle, setMiddle] = useState('blue-middle');
+  const [bottom, setBottom] = useState('blue-pants');
   const [phrase, setPhrase] = useState('');
   const [phraseList, setPhraseList] = useState([]);
   const [headCount, setHeadCount] = useState(0);
