@@ -22,10 +22,6 @@ img {
   align-items: center;
 }
 
-.editor .form-control p {
-  color: white;
-}
-
 .editor .form-control select {
   height: 25px;
   margin: 0 20px;

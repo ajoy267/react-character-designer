@@ -1,11 +1,3 @@
-.render {
-  color: white;
-}
-.phrase-list {
-  color: white;
-  font-weight: 500;
-}
-
 .parts {
   display: flex;
   flex-direction: column;
