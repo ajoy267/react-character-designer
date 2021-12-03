@@ -14,7 +14,7 @@ export default function Preview() {
   const [middleCount, setMiddleCount] = useState(0);
   const [bottomCount, setBottomCount] = useState(0);
   return (
-    <div>
+    <div className="render">
       <Character
         {...{
           head,

@@ -1,4 +1,5 @@
 import React from 'react';
+import './catchphrase.css';
 
 export default function Catchphrase({ phrase, setPhrase, setPhraseList }) {
   const handleClick = () => {
@@ -11,7 +12,7 @@ export default function Catchphrase({ phrase, setPhrase, setPhraseList }) {
         <p>Add A Catch Phrase</p>
         <input
           type="text"
-          style={{ height: '250px' }}
+          style={{ height: '25px' }}
           value={phrase}
           onChange={(e) => {
             setPhrase(e.target.value);
